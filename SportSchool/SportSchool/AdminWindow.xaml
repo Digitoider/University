@@ -1,0 +1,225 @@
+﻿<Window x:Class="SportSchool.AdminWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:SportSchool"
+        mc:Ignorable="d"
+        Closing="Window_Closing" 
+        ResizeMode="NoResize"
+        Icon="C:\Users\Alexander\Documents\Visual Studio 2015\Projects\SportSchool\SportSchool\Icons\icon.ico"
+        Title=" Вы вошли как администратор" Height="450" Width="1010">
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="196*"/>
+            <ColumnDefinition Width="787*"/>
+            <ColumnDefinition Width="9*"/>
+        </Grid.ColumnDefinitions>
+        <Label x:Name="savingLbl" Opacity="0" FontSize="24" Content="Сохранение" HorizontalAlignment="Left" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Height="40" Margin="163,310,0,0" VerticalAlignment="top" Width="200" Grid.Column="1"/>
+        <Image x:Name="ws_Woman_Running_1920x1080_jpg" Grid.ColumnSpan="3" Margin="-178,-121,-504,-270" Source="ws_Woman_Running_1920x1080.jpg" Stretch="Fill"/>
+        <StackPanel VerticalAlignment="Top" Grid.ColumnSpan="3">
+            <Menu FontFamily="Lucida Bright" FontSize="14" Height="20">
+                <MenuItem Header="Расписание">
+                    <MenuItem x:Name="sectionsMenuItem" Header="Секция" ItemsSource="{Binding}"/>
+                    <MenuItem x:Name="instructorsMenuItem" Header="Тренер" ItemsSource="{Binding}">
+                        <MenuItem.Icon>
+                            <Image Source="C:\Users\Alexander\Documents\Visual Studio 2015\Projects\SportSchool\SportSchool\Icons\Coach.png"
+                               Width="16"
+                               Height="16"/>
+                        </MenuItem.Icon>
+                    </MenuItem>
+                    <MenuItem Header="Сохранить"  Click="Save_Click">
+                        <MenuItem.Icon>
+                            <Image Source="C:\Users\Alexander\Documents\Visual Studio 2015\Projects\SportSchool\SportSchool\Icons\Microsoft_VisualStudio_Services_Icons.png"
+                               Width="16"
+                               Height="16"/>
+                        </MenuItem.Icon>
+                    </MenuItem>
+                </MenuItem>
+                <MenuItem Header="Добавить">
+                    <MenuItem Header="Учащегося" Click="AddLearner_Click"/>
+                    <MenuItem Header="Инструктора" Click="MenuItem_Click"/>
+                    <MenuItem Header="Секцию" Click="AddSection_Click"/>
+                </MenuItem>
+                <MenuItem Header="Найти">
+                    <MenuItem Header="Учащегося" Click="FindLearner_Click"/>
+                    <MenuItem Header="Инструктора" Click="FindInstructor_Click"/>
+                </MenuItem>
+                <MenuItem Header="Справка" Click="HelpMI_Click"/>
+            </Menu>
+        </StackPanel>
+
+        <!--
+        <Grid x:Name="TimeTableGrid" HorizontalAlignment="Left" Height="Auto" Margin="10,300,0,0" VerticalAlignment="Top" Width="Auto" >
+            <Grid.RowDefinitions>
+                <RowDefinition Height="50"></RowDefinition>
+                <RowDefinition Height="50"></RowDefinition>
+                <RowDefinition Height="50"></RowDefinition>
+                <RowDefinition Height="50"></RowDefinition>
+                <RowDefinition Height="50"></RowDefinition>
+                <RowDefinition Height="50"></RowDefinition>
+                <RowDefinition Height="50"></RowDefinition>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition Width="100"></ColumnDefinition>
+                <ColumnDefinition Width="100"></ColumnDefinition>
+                <ColumnDefinition Width="100"></ColumnDefinition>
+                <ColumnDefinition Width="100"></ColumnDefinition>
+                <ColumnDefinition Width="100"></ColumnDefinition>
+                <ColumnDefinition Width="100"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <Label Grid.Row="0" Grid.Column="0"/>
+            <Label Grid.Row="0" Grid.Column="1" VerticalContentAlignment="Center" HorizontalAlignment="Center">Понедельник</Label>
+            <Label Grid.Row="0" Grid.Column="2" VerticalContentAlignment="Center" HorizontalAlignment="Center">Вторник</Label>
+            <Label Grid.Row="0" Grid.Column="3" VerticalContentAlignment="Center" HorizontalAlignment="Center">Среда</Label>
+            <Label Grid.Row="0" Grid.Column="4" VerticalContentAlignment="Center" HorizontalAlignment="Center">Четверг</Label>
+            <Label Grid.Row="0" Grid.Column="5" VerticalContentAlignment="Center" HorizontalAlignment="Center">Пятница</Label>
+            <Label Grid.Row="0" Grid.Column="6" VerticalContentAlignment="Center" HorizontalAlignment="Center">Суббота</Label>
+            <Label Grid.Row="1" Grid.Column="0">8.30</Label>
+            <Label Grid.Row="2" Grid.Column="0">10.10</Label>
+            <Label Grid.Row="3" Grid.Column="0">11.50</Label>
+            <Label Grid.Row="4" Grid.Column="0">14.00</Label>
+            <Label Grid.Row="5" Grid.Column="0">15.40</Label>
+            <Label Grid.Row="6" Grid.Column="0">17.20</Label>
+            <ListBox Grid.Row="1" Grid.Column="1"/>
+            <ListBox Grid.Row="1" Grid.Column="2"/>
+            <ListBox Grid.Row="1" Grid.Column="3"/>
+            <ListBox Grid.Row="1" Grid.Column="4"/>
+            <ListBox Grid.Row="1" Grid.Column="5"/>
+            <ListBox Grid.Row="1" Grid.Column="6"/>
+            <ListBox Grid.Row="2" Grid.Column="1"/>
+            <ListBox Grid.Row="2" Grid.Column="2"/>
+            <ListBox Grid.Row="2" Grid.Column="3"/>
+            <ListBox Grid.Row="2" Grid.Column="4"/>
+            <ListBox Grid.Row="2" Grid.Column="5"/>
+            <ListBox Grid.Row="2" Grid.Column="6"/>
+            <ListBox Grid.Row="3" Grid.Column="1"/>
+            <ListBox Grid.Row="3" Grid.Column="2"/>
+            <ListBox Grid.Row="3" Grid.Column="3"/>
+            <ListBox Grid.Row="3" Grid.Column="4"/>
+            <ListBox Grid.Row="3" Grid.Column="5"/>
+            <ListBox Grid.Row="3" Grid.Column="6"/>
+            <ListBox Grid.Row="4" Grid.Column="1"/>
+            <ListBox Grid.Row="4" Grid.Column="2"/>
+            <ListBox Grid.Row="4" Grid.Column="3"/>
+            <ListBox Grid.Row="4" Grid.Column="4"/>
+            <ListBox Grid.Row="4" Grid.Column="5"/>
+            <ListBox Grid.Row="4" Grid.Column="6"/>
+            <ListBox Grid.Row="5" Grid.Column="1"/>
+            <ListBox Grid.Row="5" Grid.Column="2"/>
+            <ListBox Grid.Row="5" Grid.Column="3"/>
+            <ListBox Grid.Row="5" Grid.Column="4"/>
+            <ListBox Grid.Row="5" Grid.Column="5"/>
+            <ListBox Grid.Row="5" Grid.Column="6"/>
+            <ListBox Grid.Row="6" Grid.Column="1"/>
+            <ListBox Grid.Row="6" Grid.Column="2"/>
+            <ListBox Grid.Row="6" Grid.Column="3"/>
+            <ListBox Grid.Row="6" Grid.Column="4"/>
+            <ListBox Grid.Row="6" Grid.Column="5"/>
+            <ListBox Grid.Row="6" Grid.Column="6"/>
+        </Grid>
+-->
+        <Border BorderBrush="LightGray" Margin="20,40,493,12" BorderThickness="1" Height="Auto" Grid.ColumnSpan="2">
+            <Grid Margin="10,10"  HorizontalAlignment="Left" VerticalAlignment="Top" x:Name="fields" Width="Auto" Height="Auto" />
+        </Border>
+        <Label x:Name="GroupNameLabel" Content="L" Grid.Column="1"  HorizontalAlignment="Left" Margin="317,31,7,0" Width="228" Background="LightBlue" VerticalContentAlignment="Center" FontSize="14" VerticalAlignment="Top" />
+        <ListBox x:Name="CurrentSelectedItem" Width="235" Grid.Column="1" Margin="316,59,244,12"/>
+        <Grid Margin="10,30,0,0"  Grid.ColumnSpan="3">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="980"/>
+                <ColumnDefinition Width="171*"/>
+            </Grid.ColumnDefinitions>
+            <!--Margin="10,300,0,0"-->
+
+            <Grid x:Name="TimeTableGrid" Visibility="Hidden" HorizontalAlignment="Left" Height="Auto"  VerticalAlignment="Top" Width="Auto">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="30"/>
+                    <RowDefinition Height="90"/>
+                    <RowDefinition Height="90"/>
+                    <RowDefinition Height="90"/>
+                    <RowDefinition Height="90"/>
+                    <RowDefinition Height="90"/>
+                    <RowDefinition Height="90"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition Width="150"/>
+                    <ColumnDefinition Width="150"/>
+                    <ColumnDefinition Width="150"/>
+                    <ColumnDefinition Width="150"/>
+                    <ColumnDefinition Width="150"/>
+                    <ColumnDefinition Width="150"/>
+                </Grid.ColumnDefinitions>
+                <Label Grid.Row="0" Grid.Column="0"/>
+                <Label Grid.Row="0" Grid.Column="1" VerticalContentAlignment="Center" HorizontalAlignment="Center" FontSize="16" Content="Понедельник" Background="LightBlue" Width="148"/>
+                <Label Grid.Row="0" Grid.Column="2" VerticalContentAlignment="Center" HorizontalAlignment="Center" FontSize="16" Content="Вторник" Background="LightBlue" Width="148"/>
+                <Label Grid.Row="0" Grid.Column="3" VerticalContentAlignment="Center" HorizontalAlignment="Center" FontSize="16" Content="Среда" Background="LightBlue" Width="148"/>
+                <Label Grid.Row="0" Grid.Column="4" VerticalContentAlignment="Center" HorizontalAlignment="Center" FontSize="16" Content="Четверг" Background="LightBlue" Width="148"/>
+                <Label Grid.Row="0" Grid.Column="5" VerticalContentAlignment="Center" HorizontalAlignment="Center" FontSize="16" Content="Пятница" Background="LightBlue" Width="148"/>
+                <Label Grid.Row="0" Grid.Column="6" VerticalContentAlignment="Center" HorizontalAlignment="Center" FontSize="16" Content="Суббота" Background="LightBlue" Width="148"/>
+                <Label Grid.Row="1" Grid.Column="0" VerticalContentAlignment="Center" FontSize="16" Content="8.30"/>
+                <Label Grid.Row="2" Grid.Column="0" VerticalContentAlignment="Center" FontSize="16" Content="10.10"/>
+                <Label Grid.Row="3" Grid.Column="0" VerticalContentAlignment="Center" FontSize="16" Content="11.50"/>
+                <Label Grid.Row="4" Grid.Column="0" VerticalContentAlignment="Center" FontSize="16" Content="14.00"/>
+                <Label Grid.Row="5" Grid.Column="0" VerticalContentAlignment="Center" FontSize="16" Content="15.40"/>
+                <Label Grid.Row="6" Grid.Column="0" VerticalContentAlignment="Center" FontSize="16" Content="17.20"/>
+                <ListBox x:Name="TimeTableLB11" Grid.Row="1" Grid.Column="1"/>
+                <ListBox x:Name="TimeTableLB12" Grid.Row="1" Grid.Column="2"/>
+                <ListBox x:Name="TimeTableLB13" Grid.Row="1" Grid.Column="3"/>
+                <ListBox x:Name="TimeTableLB14" Grid.Row="1" Grid.Column="4"/>
+                <ListBox x:Name="TimeTableLB15" Grid.Row="1" Grid.Column="5"/>
+                <ListBox x:Name="TimeTableLB16" Grid.Row="1" Grid.Column="6"/>
+                <ListBox x:Name="TimeTableLB21" Grid.Row="2" Grid.Column="1"/>
+                <ListBox x:Name="TimeTableLB22" Grid.Row="2" Grid.Column="2"/>
+                <ListBox x:Name="TimeTableLB23" Grid.Row="2" Grid.Column="3"/>
+                <ListBox x:Name="TimeTableLB24" Grid.Row="2" Grid.Column="4"/>
+                <ListBox x:Name="TimeTableLB25" Grid.Row="2" Grid.Column="5"/>
+                <ListBox x:Name="TimeTableLB26" Grid.Row="2" Grid.Column="6"/>
+                <ListBox x:Name="TimeTableLB31" Grid.Row="3" Grid.Column="1"/>
+                <ListBox x:Name="TimeTableLB32" Grid.Row="3" Grid.Column="2"/>
+                <ListBox x:Name="TimeTableLB33" Grid.Row="3" Grid.Column="3"/>
+                <ListBox x:Name="TimeTableLB34" Grid.Row="3" Grid.Column="4"/>
+                <ListBox x:Name="TimeTableLB35" Grid.Row="3" Grid.Column="5"/>
+                <ListBox x:Name="TimeTableLB36" Grid.Row="3" Grid.Column="6"/>
+                <ListBox x:Name="TimeTableLB41" Grid.Row="4" Grid.Column="1"/>
+                <ListBox x:Name="TimeTableLB42" Grid.Row="4" Grid.Column="2"/>
+                <ListBox x:Name="TimeTableLB43" Grid.Row="4" Grid.Column="3"/>
+                <ListBox x:Name="TimeTableLB44" Grid.Row="4" Grid.Column="4"/>
+                <ListBox x:Name="TimeTableLB45" Grid.Row="4" Grid.Column="5"/>
+                <ListBox x:Name="TimeTableLB46" Grid.Row="4" Grid.Column="6"/>
+                <ListBox x:Name="TimeTableLB51" Grid.Row="5" Grid.Column="1"/>
+                <ListBox x:Name="TimeTableLB52" Grid.Row="5" Grid.Column="2"/>
+                <ListBox x:Name="TimeTableLB53" Grid.Row="5" Grid.Column="3"/>
+                <ListBox x:Name="TimeTableLB54" Grid.Row="5" Grid.Column="4"/>
+                <ListBox x:Name="TimeTableLB55" Grid.Row="5" Grid.Column="5"/>
+                <ListBox x:Name="TimeTableLB56" Grid.Row="5" Grid.Column="6"/>
+                <ListBox x:Name="TimeTableLB61" Grid.Row="6" Grid.Column="1"/>
+                <ListBox x:Name="TimeTableLB62" Grid.Row="6" Grid.Column="2"/>
+                <ListBox x:Name="TimeTableLB63" Grid.Row="6" Grid.Column="3"/>
+                <ListBox x:Name="TimeTableLB64" Grid.Row="6" Grid.Column="4"/>
+                <ListBox x:Name="TimeTableLB65" Grid.Row="6" Grid.Column="5"/>
+                <ListBox x:Name="TimeTableLB66" Grid.Row="6" Grid.Column="6"/>
+            </Grid>
+            <Grid Margin="780,0,0,0" HorizontalAlignment="Left" VerticalAlignment="Top">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width=" 235"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="30"/>
+                    <RowDefinition Height="300"/>
+                    <RowDefinition Height="15"/>
+                </Grid.RowDefinitions>
+
+                <Label Grid.Row="0" Grid.Column="0" Content="Учащиеся" Background="LightBlue" VerticalContentAlignment="Center" FontSize="14"/>
+                <ListBox Grid.Row="1" Grid.Column="0" x:Name="LearnersLB" Grid.RowSpan="2" Margin="0,0,0,-24" />
+                <ProgressBar Grid.Row="2" Grid.Column="0" x:Name="learnersLoadPB" Margin="0,5,0,0" IsIndeterminate="True" Opacity="0"/>
+            </Grid>
+            <Button x:Name="GetToTimeTable" Content="←" FontSize="24" Background="White" BorderBrush="white" HorizontalAlignment="Left" Margin="745,126,0,0" VerticalAlignment="Top" Width="25" Click="GetToTimeTable_Click"/>
+            <Button x:Name="GetFromTimeTable" Content="→" FontSize="24" Background="White" BorderBrush="white" HorizontalAlignment="Left" Margin="745,197,0,0" VerticalAlignment="Top" Width="25" Click="GetFromTimeTable_Click"/>
+        </Grid>
+        <Button x:Name="button" Visibility="Hidden" Opacity="0.0" Content="Сгенерить в БД Данные" HorizontalAlignment="Left" Margin="517,23,0,0" VerticalAlignment="Top" Width="242" Click="button_Click" Grid.Column="1"/>
+        <ProgressBar x:Name="UploadPB" Opacity="0" IsIndeterminate="True" HorizontalAlignment="Left" Height="20" Margin="163,350,0,0" VerticalAlignment="Top" Width="200" Grid.Column="1"/>
+    </Grid>
+</Window>

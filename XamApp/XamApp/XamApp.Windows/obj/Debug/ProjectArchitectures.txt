@@ -1,0 +1,2 @@
+C:\Users\Alexander\documents\visual studio 2015\Projects\XamApp\XamApp\XamApp.Windows\XamApp.Windows.csproj;neutral
+C:\Users\Alexander\documents\visual studio 2015\Projects\XamApp\XamApp\XamApp\XamApp.csproj;neutral

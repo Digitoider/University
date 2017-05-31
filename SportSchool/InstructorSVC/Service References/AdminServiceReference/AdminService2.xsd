@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/SportSchoolClassLibrary" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/SportSchoolClassLibrary" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="ArrayOfLearner">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Learner" nillable="true" type="tns:Learner" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfLearner" nillable="true" type="tns:ArrayOfLearner" />
+  <xs:complexType name="Learner">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:Person">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="BirthDate" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="RegistrationDate" type="xs:dateTime" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="Learner" nillable="true" type="tns:Learner" />
+  <xs:complexType name="Person">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Email" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ID" type="xs:int" />
+      <xs:element minOccurs="0" name="MiddleName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Password" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SectionID" type="xs:int" />
+      <xs:element minOccurs="0" name="Surname" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TelephoneNumber" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Person" nillable="true" type="tns:Person" />
+  <xs:complexType name="ArrayOfInstructor">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Instructor" nillable="true" type="tns:Instructor" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfInstructor" nillable="true" type="tns:ArrayOfInstructor" />
+  <xs:complexType name="Instructor">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:Person">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="Instructor" nillable="true" type="tns:Instructor" />
+  <xs:complexType name="ArrayOfSection">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Section" nillable="true" type="tns:Section" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfSection" nillable="true" type="tns:ArrayOfSection" />
+  <xs:complexType name="Section">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ID" type="xs:int" />
+      <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Section" nillable="true" type="tns:Section" />
+  <xs:complexType name="ArrayOfTimeTableRow">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="TimeTableRow" nillable="true" type="tns:TimeTableRow" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfTimeTableRow" nillable="true" type="tns:ArrayOfTimeTableRow" />
+  <xs:complexType name="TimeTableRow">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Holder_ID" type="xs:int" />
+      <xs:element minOccurs="0" name="TableTime" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Weekday_ID" type="xs:int" />
+      <xs:element minOccurs="0" name="prevValue" nillable="true" type="tns:TimeTableRow" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="TimeTableRow" nillable="true" type="tns:TimeTableRow" />
+</xs:schema>

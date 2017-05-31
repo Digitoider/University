@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="XamApp.Page1">
+    <Label>Первая лаба</Label>
+    <Stacklayout>
+      <Label x:Name="label1"></Label>
+      <Button x:Name="clickButton" >Нажми на меня</Button>
+    </Stacklayout>
+</ContentPage>

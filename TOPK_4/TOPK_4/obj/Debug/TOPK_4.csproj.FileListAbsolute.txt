@@ -1,0 +1,6 @@
+c:\users\alexander\documents\visual studio 2015\Projects\TOPK_4\TOPK_4\bin\Debug\TOPK_4.exe.config
+C:\Users\Alexander\documents\visual studio 2015\Projects\TOPK_4\TOPK_4\bin\Debug\TOPK_4.exe
+C:\Users\Alexander\documents\visual studio 2015\Projects\TOPK_4\TOPK_4\bin\Debug\TOPK_4.pdb
+C:\Users\Alexander\documents\visual studio 2015\Projects\TOPK_4\TOPK_4\obj\Debug\TOPK_4.exe
+C:\Users\Alexander\documents\visual studio 2015\Projects\TOPK_4\TOPK_4\obj\Debug\TOPK_4.pdb
+C:\Users\Alexander\documents\visual studio 2015\Projects\TOPK_4\TOPK_4\obj\Debug\TOPK_4.csprojResolveAssemblyReference.cache

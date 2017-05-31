@@ -1,0 +1,34 @@
+﻿<Window x:Class="SportSchool.AddInstructorWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:SportSchool"
+        mc:Ignorable="d"
+        ResizeMode="NoResize"
+        Icon="C:\Users\Alexander\Documents\Visual Studio 2015\Projects\SportSchool\SportSchool\icon.ico"
+        Title="Добавление Тренера" Height="400" Width="410">
+    <Grid>
+        <Image x:Name="BG_jpg" Margin="-25,-25,-25,-25" Source="BG.jpg" Stretch="Fill"/>
+        <Label x:Name="WarningLbl" Width="Auto" Height="Auto" Foreground="Red"/>
+
+        <Label x:Name="ValueAdded" Width="Auto" Height="Auto" Foreground="Green" Margin="130,295,0,0"/>
+        <StackPanel x:Name="stackPanel" HorizontalAlignment="Left" Margin="10,10,0,0">
+            <Label Content="Выберите секцию" Width="120" Height="20" Padding="0,0,0,0" VerticalContentAlignment="Center"/>
+            <ComboBox x:Name="SectionCB" ItemsSource="{Binding}"/>
+            <Label Content="Имя" Width="120" Height="20" Padding="0,0,0,0" VerticalContentAlignment="Center"/>
+            <TextBox x:Name="NameTB" Width="120" Height="20" VerticalContentAlignment="Center"/>
+            <Label Content="Фамилия" Width="120" Height="20" Padding="0,0,0,0" VerticalContentAlignment="Center"/>
+            <TextBox x:Name="SurnameTB" Width="120" Height="20" VerticalContentAlignment="Center"/>
+            <Label Content="Отчество" Width="120" Height="20" Padding="0,0,0,0" VerticalContentAlignment="Center"/>
+            <TextBox x:Name="MiddleNameTB" Width="120" Height="20" VerticalContentAlignment="Center"/>
+            <Label Content="Телефонный номер" Width="120" Height="20" Padding="0,0,0,0" VerticalContentAlignment="Center"/>
+            <TextBox x:Name="TelephoneNumberTB" Width="120" Height="20" VerticalContentAlignment="Center"/>
+            <Label Content="Email" Width="120" Height="20" Padding="0,0,0,0" VerticalContentAlignment="Center"/>
+            <TextBox x:Name="EmailTB" Width="120" Height="20" VerticalContentAlignment="Center"/>
+            <Label Content="Пароль" Width="120" Height="20" Padding="0,0,0,0" VerticalContentAlignment="Center"/>
+            <TextBox x:Name="PasswordTB" Width="120" Height="20" VerticalContentAlignment="Center"/>
+            <Button x:Name="AddBtn" Content="Добавить" Margin="0,5,0,0" Click="AddInstructor_Click"/>
+        </StackPanel>
+    </Grid>
+</Window>

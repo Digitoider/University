@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="InstructorService" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://localhost:61603/InstructorService.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://localhost:61603/InstructorService.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost:61603/InstructorService.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/SportSchoolClassLibrary" />
+      <xsd:import schemaLocation="http://localhost:61603/InstructorService.svc?xsd=xsd3" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IInstructorService_GetLearners_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetLearners" />
+  </wsdl:message>
+  <wsdl:message name="IInstructorService_GetLearners_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetLearnersResponse" />
+  </wsdl:message>
+  <wsdl:message name="IInstructorService_SaveAttendance_InputMessage">
+    <wsdl:part name="parameters" element="tns:SaveAttendance" />
+  </wsdl:message>
+  <wsdl:message name="IInstructorService_SaveAttendance_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SaveAttendanceResponse" />
+  </wsdl:message>
+  <wsdl:message name="IInstructorService_GetInstructor_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetInstructor" />
+  </wsdl:message>
+  <wsdl:message name="IInstructorService_GetInstructor_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetInstructorResponse" />
+  </wsdl:message>
+  <wsdl:message name="IInstructorService_AddCompetition_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddCompetition" />
+  </wsdl:message>
+  <wsdl:message name="IInstructorService_AddCompetition_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddCompetitionResponse" />
+  </wsdl:message>
+  <wsdl:message name="IInstructorService_GetCompetitions_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCompetitions" />
+  </wsdl:message>
+  <wsdl:message name="IInstructorService_GetCompetitions_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCompetitionsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IInstructorService_GetCompetitiors_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCompetitiors" />
+  </wsdl:message>
+  <wsdl:message name="IInstructorService_GetCompetitiors_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCompetitiorsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IInstructorService_GetAttendance_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAttendance" />
+  </wsdl:message>
+  <wsdl:message name="IInstructorService_GetAttendance_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAttendanceResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IInstructorService">
+    <wsdl:operation name="GetLearners">
+      <wsdl:input wsaw:Action="http://tempuri.org/IInstructorService/GetLearners" message="tns:IInstructorService_GetLearners_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IInstructorService/GetLearnersResponse" message="tns:IInstructorService_GetLearners_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SaveAttendance">
+      <wsdl:input wsaw:Action="http://tempuri.org/IInstructorService/SaveAttendance" message="tns:IInstructorService_SaveAttendance_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IInstructorService/SaveAttendanceResponse" message="tns:IInstructorService_SaveAttendance_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetInstructor">
+      <wsdl:input wsaw:Action="http://tempuri.org/IInstructorService/GetInstructor" message="tns:IInstructorService_GetInstructor_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IInstructorService/GetInstructorResponse" message="tns:IInstructorService_GetInstructor_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddCompetition">
+      <wsdl:input wsaw:Action="http://tempuri.org/IInstructorService/AddCompetition" message="tns:IInstructorService_AddCompetition_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IInstructorService/AddCompetitionResponse" message="tns:IInstructorService_AddCompetition_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCompetitions">
+      <wsdl:input wsaw:Action="http://tempuri.org/IInstructorService/GetCompetitions" message="tns:IInstructorService_GetCompetitions_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IInstructorService/GetCompetitionsResponse" message="tns:IInstructorService_GetCompetitions_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCompetitiors">
+      <wsdl:input wsaw:Action="http://tempuri.org/IInstructorService/GetCompetitiors" message="tns:IInstructorService_GetCompetitiors_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IInstructorService/GetCompetitiorsResponse" message="tns:IInstructorService_GetCompetitiors_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAttendance">
+      <wsdl:input wsaw:Action="http://tempuri.org/IInstructorService/GetAttendance" message="tns:IInstructorService_GetAttendance_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IInstructorService/GetAttendanceResponse" message="tns:IInstructorService_GetAttendance_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IInstructorService" type="tns:IInstructorService">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetLearners">
+      <soap:operation soapAction="http://tempuri.org/IInstructorService/GetLearners" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SaveAttendance">
+      <soap:operation soapAction="http://tempuri.org/IInstructorService/SaveAttendance" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetInstructor">
+      <soap:operation soapAction="http://tempuri.org/IInstructorService/GetInstructor" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddCompetition">
+      <soap:operation soapAction="http://tempuri.org/IInstructorService/AddCompetition" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCompetitions">
+      <soap:operation soapAction="http://tempuri.org/IInstructorService/GetCompetitions" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCompetitiors">
+      <soap:operation soapAction="http://tempuri.org/IInstructorService/GetCompetitiors" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAttendance">
+      <soap:operation soapAction="http://tempuri.org/IInstructorService/GetAttendance" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="InstructorService">
+    <wsdl:port name="BasicHttpBinding_IInstructorService" binding="tns:BasicHttpBinding_IInstructorService">
+      <soap:address location="http://localhost:61603/InstructorService.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

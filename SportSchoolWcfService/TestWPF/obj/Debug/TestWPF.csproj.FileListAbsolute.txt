@@ -1,0 +1,16 @@
+c:\users\alexander\documents\visual studio 2015\Projects\SportSchoolWcfService\TestWPF\obj\Debug\TestWPF.csprojResolveAssemblyReference.cache
+c:\users\alexander\documents\visual studio 2015\Projects\SportSchoolWcfService\TestWPF\obj\Debug\MainWindow.g.cs
+c:\users\alexander\documents\visual studio 2015\Projects\SportSchoolWcfService\TestWPF\obj\Debug\App.g.cs
+c:\users\alexander\documents\visual studio 2015\Projects\SportSchoolWcfService\TestWPF\obj\Debug\TestWPF_MarkupCompile.cache
+c:\users\alexander\documents\visual studio 2015\Projects\SportSchoolWcfService\TestWPF\obj\Debug\TestWPF_MarkupCompile.lref
+c:\users\alexander\documents\visual studio 2015\Projects\SportSchoolWcfService\TestWPF\bin\Debug\TestWPF.exe.config
+c:\users\alexander\documents\visual studio 2015\Projects\SportSchoolWcfService\TestWPF\bin\Debug\TestWPF.exe
+c:\users\alexander\documents\visual studio 2015\Projects\SportSchoolWcfService\TestWPF\bin\Debug\TestWPF.pdb
+c:\users\alexander\documents\visual studio 2015\Projects\SportSchoolWcfService\TestWPF\obj\Debug\MainWindow.baml
+c:\users\alexander\documents\visual studio 2015\Projects\SportSchoolWcfService\TestWPF\obj\Debug\TestWPF.g.resources
+c:\users\alexander\documents\visual studio 2015\Projects\SportSchoolWcfService\TestWPF\obj\Debug\TestWPF.Properties.Resources.resources
+c:\users\alexander\documents\visual studio 2015\Projects\SportSchoolWcfService\TestWPF\obj\Debug\TestWPF.csproj.GenerateResource.Cache
+c:\users\alexander\documents\visual studio 2015\Projects\SportSchoolWcfService\TestWPF\obj\Debug\TestWPF.exe
+c:\users\alexander\documents\visual studio 2015\Projects\SportSchoolWcfService\TestWPF\obj\Debug\TestWPF.pdb
+C:\Users\Alexander\Documents\Visual Studio 2015\Projects\SportSchoolWcfService\TestWPF\bin\Debug\MySql.Data.dll
+C:\Users\Alexander\Documents\Visual Studio 2015\Projects\SportSchoolWcfService\TestWPF\bin\Debug\MySql.Data.xml

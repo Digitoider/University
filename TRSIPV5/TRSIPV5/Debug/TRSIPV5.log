@@ -1,0 +1,4 @@
+﻿  TRSIPV5.cpp
+c:\users\alexander\documents\visual studio 2015\projects\trsipv5\trsipv5\floidparall2.h(199): warning C4244: аргумент: преобразование "time_t" в "unsigned int", возможна потеря данных
+  TRSIPV5.vcxproj -> C:\Users\Alexander\Documents\Visual Studio 2015\Projects\TRSIPV5\Debug\TRSIPV5.exe
+  TRSIPV5.vcxproj -> C:\Users\Alexander\Documents\Visual Studio 2015\Projects\TRSIPV5\Debug\TRSIPV5.pdb (Full PDB)

@@ -1,0 +1,5 @@
+c:\users\alexander\documents\visual studio 2015\Projects\toi4\toi4\bin\Debug\toi4.exe.config
+c:\users\alexander\documents\visual studio 2015\Projects\toi4\toi4\bin\Debug\toi4.exe
+c:\users\alexander\documents\visual studio 2015\Projects\toi4\toi4\bin\Debug\toi4.pdb
+c:\users\alexander\documents\visual studio 2015\Projects\toi4\toi4\obj\Debug\toi4.exe
+c:\users\alexander\documents\visual studio 2015\Projects\toi4\toi4\obj\Debug\toi4.pdb

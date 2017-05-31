@@ -1,0 +1,20 @@
+﻿<Window x:Class="SportSchool.LoadingWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:SportSchool"
+        mc:Ignorable="d"
+        Closing="LoadingWindow_Closing"
+        ResizeMode="NoResize"
+        Icon="C:\Users\Alexander\Documents\Visual Studio 2015\Projects\SportSchool\SportSchool\icon.ico"
+        Title="LoadingWindow" Height="124.272" Width="426.214">
+    <Grid>
+        <Image x:Name="BG_jpg" Margin="-23,-56,-27,-394" Source="BG.jpg" Stretch="Fill"/>
+        <StackPanel HorizontalAlignment="Center" Width="150" VerticalAlignment="Center">
+            <Label x:Name="msg" HorizontalAlignment="Center" HorizontalContentAlignment="Center" VerticalAlignment="Center" Width="420" Content="Desired content"/>
+            <ProgressBar x:Name="loadingProgressBar" Margin="0,5,0,0" IsIndeterminate="True"/>
+        </StackPanel>
+
+    </Grid>
+</Window>

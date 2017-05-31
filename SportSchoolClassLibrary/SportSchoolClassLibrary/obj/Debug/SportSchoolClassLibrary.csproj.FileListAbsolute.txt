@@ -1,0 +1,9 @@
+c:\users\alexander\documents\visual studio 2015\Projects\SportSchoolClassLibrary\SportSchoolClassLibrary\bin\Debug\SportSchoolClassLibrary.dll
+c:\users\alexander\documents\visual studio 2015\Projects\SportSchoolClassLibrary\SportSchoolClassLibrary\bin\Debug\SportSchoolClassLibrary.pdb
+c:\users\alexander\documents\visual studio 2015\Projects\SportSchoolClassLibrary\SportSchoolClassLibrary\bin\Debug\MySql.Data.dll
+c:\users\alexander\documents\visual studio 2015\Projects\SportSchoolClassLibrary\SportSchoolClassLibrary\bin\Debug\MySql.Data.Entity.EF6.dll
+c:\users\alexander\documents\visual studio 2015\Projects\SportSchoolClassLibrary\SportSchoolClassLibrary\bin\Debug\MySql.Data.xml
+c:\users\alexander\documents\visual studio 2015\Projects\SportSchoolClassLibrary\SportSchoolClassLibrary\bin\Debug\MySql.Data.Entity.EF6.xml
+c:\users\alexander\documents\visual studio 2015\Projects\SportSchoolClassLibrary\SportSchoolClassLibrary\obj\Debug\SportSchoolClassLibrary.dll
+c:\users\alexander\documents\visual studio 2015\Projects\SportSchoolClassLibrary\SportSchoolClassLibrary\obj\Debug\SportSchoolClassLibrary.pdb
+C:\Users\Alexander\Documents\Visual Studio 2015\Projects\SportSchoolClassLibrary\SportSchoolClassLibrary\obj\Debug\SportSchoolClassLibrary.csprojResolveAssemblyReference.cache

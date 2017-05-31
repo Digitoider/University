@@ -1,0 +1,6 @@
+c:\users\alexander\documents\visual studio 2015\Projects\TOI2\TOI2\bin\Debug\TOI2.exe.config
+c:\users\alexander\documents\visual studio 2015\Projects\TOI2\TOI2\bin\Debug\TOI2.exe
+c:\users\alexander\documents\visual studio 2015\Projects\TOI2\TOI2\bin\Debug\TOI2.pdb
+c:\users\alexander\documents\visual studio 2015\Projects\TOI2\TOI2\obj\Debug\TOI2.csprojResolveAssemblyReference.cache
+c:\users\alexander\documents\visual studio 2015\Projects\TOI2\TOI2\obj\Debug\TOI2.exe
+c:\users\alexander\documents\visual studio 2015\Projects\TOI2\TOI2\obj\Debug\TOI2.pdb

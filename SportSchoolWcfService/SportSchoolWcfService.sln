@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.24720.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SportSchoolWcfService", "SportSchoolWcfService\SportSchoolWcfService.csproj", "{8FD739FA-B742-40ED-9174-4C4A3C9D9674}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestWPF", "TestWPF\TestWPF.csproj", "{19BD6D7B-DEDD-4668-A1E3-5A1CFB2D4F20}"
+	ProjectSection(ProjectDependencies) = postProject
+		{8FD739FA-B742-40ED-9174-4C4A3C9D9674} = {8FD739FA-B742-40ED-9174-4C4A3C9D9674}
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{8FD739FA-B742-40ED-9174-4C4A3C9D9674}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8FD739FA-B742-40ED-9174-4C4A3C9D9674}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8FD739FA-B742-40ED-9174-4C4A3C9D9674}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8FD739FA-B742-40ED-9174-4C4A3C9D9674}.Release|Any CPU.Build.0 = Release|Any CPU
+		{19BD6D7B-DEDD-4668-A1E3-5A1CFB2D4F20}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{19BD6D7B-DEDD-4668-A1E3-5A1CFB2D4F20}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{19BD6D7B-DEDD-4668-A1E3-5A1CFB2D4F20}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{19BD6D7B-DEDD-4668-A1E3-5A1CFB2D4F20}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

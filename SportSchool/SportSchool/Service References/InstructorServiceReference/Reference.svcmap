@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="6d27db04-a3bd-4695-a3a7-8e569e6d58f8" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:61603/InstructorService.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="InstructorService.wsdl" MetadataType="Wsdl" ID="89f974d4-4030-4afb-816d-64ca75d30236" SourceId="1" SourceUrl="http://localhost:61603/InstructorService.svc?wsdl" />
+    <MetadataFile FileName="InstructorService.xsd" MetadataType="Schema" ID="20c9928c-3eb5-464b-8d51-c65fb7abaff4" SourceId="1" SourceUrl="http://localhost:61603/InstructorService.svc?xsd=xsd1" />
+    <MetadataFile FileName="InstructorService1.xsd" MetadataType="Schema" ID="5bf0ad4d-cce6-4b9e-b43b-34f5379c17a5" SourceId="1" SourceUrl="http://localhost:61603/InstructorService.svc?xsd=xsd0" />
+    <MetadataFile FileName="InstructorService3.xsd" MetadataType="Schema" ID="48b5dffc-1235-4c5d-9c61-03d1c9fa925b" SourceId="1" SourceUrl="http://localhost:61603/InstructorService.svc?xsd=xsd3" />
+    <MetadataFile FileName="InstructorService2.xsd" MetadataType="Schema" ID="9d630dd4-20b3-4209-8e75-dcd69edc101b" SourceId="1" SourceUrl="http://localhost:61603/InstructorService.svc?xsd=xsd2" />
+    <MetadataFile FileName="InstructorService.disco" MetadataType="Disco" ID="c09684ca-ae84-4540-8bf4-04a6bc601cff" SourceId="1" SourceUrl="http://localhost:61603/InstructorService.svc?disco" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

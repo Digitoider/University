@@ -1,0 +1,325 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="AdminService" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://localhost:55891/AdminService.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://localhost:55891/AdminService.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost:55891/AdminService.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/SportSchoolClassLibrary" />
+      <xsd:import schemaLocation="http://localhost:55891/AdminService.svc?xsd=xsd3" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IAdminService_GetLeranersBy_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetLeranersBy" />
+  </wsdl:message>
+  <wsdl:message name="IAdminService_GetLeranersBy_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetLeranersByResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAdminService_GetInstructorsBy_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetInstructorsBy" />
+  </wsdl:message>
+  <wsdl:message name="IAdminService_GetInstructorsBy_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetInstructorsByResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAdminService_InsertNewInstructor_InputMessage">
+    <wsdl:part name="parameters" element="tns:InsertNewInstructor" />
+  </wsdl:message>
+  <wsdl:message name="IAdminService_InsertNewInstructor_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InsertNewInstructorResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAdminService_InsertNewLearner_InputMessage">
+    <wsdl:part name="parameters" element="tns:InsertNewLearner" />
+  </wsdl:message>
+  <wsdl:message name="IAdminService_InsertNewLearner_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InsertNewLearnerResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAdminService_GetSectionID_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetSectionID" />
+  </wsdl:message>
+  <wsdl:message name="IAdminService_GetSectionID_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetSectionIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAdminService_GetSections_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetSections" />
+  </wsdl:message>
+  <wsdl:message name="IAdminService_GetSections_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetSectionsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAdminService_EmailExists_InputMessage">
+    <wsdl:part name="parameters" element="tns:EmailExists" />
+  </wsdl:message>
+  <wsdl:message name="IAdminService_EmailExists_OutputMessage">
+    <wsdl:part name="parameters" element="tns:EmailExistsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAdminService_SectionExists_InputMessage">
+    <wsdl:part name="parameters" element="tns:SectionExists" />
+  </wsdl:message>
+  <wsdl:message name="IAdminService_SectionExists_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SectionExistsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAdminService_InsertSection_InputMessage">
+    <wsdl:part name="parameters" element="tns:InsertSection" />
+  </wsdl:message>
+  <wsdl:message name="IAdminService_InsertSection_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InsertSectionResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAdminService_GetLearnesTimeTable_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetLearnesTimeTable" />
+  </wsdl:message>
+  <wsdl:message name="IAdminService_GetLearnesTimeTable_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetLearnesTimeTableResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAdminService_GetOtherLearnesTimeTable_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetOtherLearnesTimeTable" />
+  </wsdl:message>
+  <wsdl:message name="IAdminService_GetOtherLearnesTimeTable_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetOtherLearnesTimeTableResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAdminService_GetLearner_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetLearner" />
+  </wsdl:message>
+  <wsdl:message name="IAdminService_GetLearner_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetLearnerResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAdminService_ChangeLearnersTimeTable_InputMessage">
+    <wsdl:part name="parameters" element="tns:ChangeLearnersTimeTable" />
+  </wsdl:message>
+  <wsdl:message name="IAdminService_ChangeLearnersTimeTable_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ChangeLearnersTimeTableResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAdminService_FreeLearners_InputMessage">
+    <wsdl:part name="parameters" element="tns:FreeLearners" />
+  </wsdl:message>
+  <wsdl:message name="IAdminService_FreeLearners_OutputMessage">
+    <wsdl:part name="parameters" element="tns:FreeLearnersResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAdminService_InsertIntoInstructorsTimeTable_InputMessage">
+    <wsdl:part name="parameters" element="tns:InsertIntoInstructorsTimeTable" />
+  </wsdl:message>
+  <wsdl:message name="IAdminService_InsertIntoInstructorsTimeTable_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InsertIntoInstructorsTimeTableResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAdminService_DeleteFromInstructorsTimeTable_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteFromInstructorsTimeTable" />
+  </wsdl:message>
+  <wsdl:message name="IAdminService_DeleteFromInstructorsTimeTable_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteFromInstructorsTimeTableResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IAdminService">
+    <wsdl:operation name="GetLeranersBy">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAdminService/GetLeranersBy" message="tns:IAdminService_GetLeranersBy_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAdminService/GetLeranersByResponse" message="tns:IAdminService_GetLeranersBy_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetInstructorsBy">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAdminService/GetInstructorsBy" message="tns:IAdminService_GetInstructorsBy_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAdminService/GetInstructorsByResponse" message="tns:IAdminService_GetInstructorsBy_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertNewInstructor">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAdminService/InsertNewInstructor" message="tns:IAdminService_InsertNewInstructor_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAdminService/InsertNewInstructorResponse" message="tns:IAdminService_InsertNewInstructor_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertNewLearner">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAdminService/InsertNewLearner" message="tns:IAdminService_InsertNewLearner_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAdminService/InsertNewLearnerResponse" message="tns:IAdminService_InsertNewLearner_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSectionID">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAdminService/GetSectionID" message="tns:IAdminService_GetSectionID_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAdminService/GetSectionIDResponse" message="tns:IAdminService_GetSectionID_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSections">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAdminService/GetSections" message="tns:IAdminService_GetSections_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAdminService/GetSectionsResponse" message="tns:IAdminService_GetSections_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="EmailExists">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAdminService/EmailExists" message="tns:IAdminService_EmailExists_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAdminService/EmailExistsResponse" message="tns:IAdminService_EmailExists_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SectionExists">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAdminService/SectionExists" message="tns:IAdminService_SectionExists_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAdminService/SectionExistsResponse" message="tns:IAdminService_SectionExists_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertSection">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAdminService/InsertSection" message="tns:IAdminService_InsertSection_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAdminService/InsertSectionResponse" message="tns:IAdminService_InsertSection_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetLearnesTimeTable">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAdminService/GetLearnesTimeTable" message="tns:IAdminService_GetLearnesTimeTable_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAdminService/GetLearnesTimeTableResponse" message="tns:IAdminService_GetLearnesTimeTable_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetOtherLearnesTimeTable">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAdminService/GetOtherLearnesTimeTable" message="tns:IAdminService_GetOtherLearnesTimeTable_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAdminService/GetOtherLearnesTimeTableResponse" message="tns:IAdminService_GetOtherLearnesTimeTable_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetLearner">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAdminService/GetLearner" message="tns:IAdminService_GetLearner_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAdminService/GetLearnerResponse" message="tns:IAdminService_GetLearner_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ChangeLearnersTimeTable">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAdminService/ChangeLearnersTimeTable" message="tns:IAdminService_ChangeLearnersTimeTable_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAdminService/ChangeLearnersTimeTableResponse" message="tns:IAdminService_ChangeLearnersTimeTable_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="FreeLearners">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAdminService/FreeLearners" message="tns:IAdminService_FreeLearners_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAdminService/FreeLearnersResponse" message="tns:IAdminService_FreeLearners_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertIntoInstructorsTimeTable">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAdminService/InsertIntoInstructorsTimeTable" message="tns:IAdminService_InsertIntoInstructorsTimeTable_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAdminService/InsertIntoInstructorsTimeTableResponse" message="tns:IAdminService_InsertIntoInstructorsTimeTable_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteFromInstructorsTimeTable">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAdminService/DeleteFromInstructorsTimeTable" message="tns:IAdminService_DeleteFromInstructorsTimeTable_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAdminService/DeleteFromInstructorsTimeTableResponse" message="tns:IAdminService_DeleteFromInstructorsTimeTable_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IAdminService" type="tns:IAdminService">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetLeranersBy">
+      <soap:operation soapAction="http://tempuri.org/IAdminService/GetLeranersBy" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetInstructorsBy">
+      <soap:operation soapAction="http://tempuri.org/IAdminService/GetInstructorsBy" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertNewInstructor">
+      <soap:operation soapAction="http://tempuri.org/IAdminService/InsertNewInstructor" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertNewLearner">
+      <soap:operation soapAction="http://tempuri.org/IAdminService/InsertNewLearner" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSectionID">
+      <soap:operation soapAction="http://tempuri.org/IAdminService/GetSectionID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSections">
+      <soap:operation soapAction="http://tempuri.org/IAdminService/GetSections" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EmailExists">
+      <soap:operation soapAction="http://tempuri.org/IAdminService/EmailExists" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SectionExists">
+      <soap:operation soapAction="http://tempuri.org/IAdminService/SectionExists" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertSection">
+      <soap:operation soapAction="http://tempuri.org/IAdminService/InsertSection" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLearnesTimeTable">
+      <soap:operation soapAction="http://tempuri.org/IAdminService/GetLearnesTimeTable" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetOtherLearnesTimeTable">
+      <soap:operation soapAction="http://tempuri.org/IAdminService/GetOtherLearnesTimeTable" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLearner">
+      <soap:operation soapAction="http://tempuri.org/IAdminService/GetLearner" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ChangeLearnersTimeTable">
+      <soap:operation soapAction="http://tempuri.org/IAdminService/ChangeLearnersTimeTable" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FreeLearners">
+      <soap:operation soapAction="http://tempuri.org/IAdminService/FreeLearners" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertIntoInstructorsTimeTable">
+      <soap:operation soapAction="http://tempuri.org/IAdminService/InsertIntoInstructorsTimeTable" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteFromInstructorsTimeTable">
+      <soap:operation soapAction="http://tempuri.org/IAdminService/DeleteFromInstructorsTimeTable" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="AdminService">
+    <wsdl:port name="BasicHttpBinding_IAdminService" binding="tns:BasicHttpBinding_IAdminService">
+      <soap:address location="http://localhost:55891/AdminService.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
